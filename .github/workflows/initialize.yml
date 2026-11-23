@@ -12,7 +12,7 @@ jobs:
         run: |
           import base64,hashlib,io,pathlib,zipfile
           if not pathlib.Path('README.md').exists():
-              data=pathlib.Path('approved-source.zip').read_bytes()
+              data=base64.b64decode(''.join(p.read_text() for p in sorted(pathlib.Path('.publish').glob('part*.txt'))))
               assert hashlib.sha256(data).hexdigest()=='9b6df91db1345f8111ad1703cb92c2c4e23d44c0937e4f28a7dae2919f9edf63'
               with zipfile.ZipFile(io.BytesIO(data)) as z:
                   for item in z.infolist():
@@ -26,7 +26,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          rm approved-source.zip
+          rm -r .publish
           git add -A
           git commit -m 'Publish reviewed AI-assisted bean leaf transfer project'
           git push
