@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beanleaf-transfer"
+version = "1.0.0"
+description = "Color baseline versus frozen ResNet-18 features on Makerere bean leaves"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy==2.2.6",
+    "Pillow==12.3.0",
+    "matplotlib==3.10.9",
+    "scikit-learn==1.5.2",
+    "pyarrow==18.1.0",
+    "torch==2.14.1",
+    "transformers==4.46.3",
+    "safetensors==0.8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4", "ruff==0.8.6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 99
+indent-width = 4
+
+[tool.ruff.format]
+indent-style = "space"

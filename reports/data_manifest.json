@@ -1,0 +1,14 @@
+{
+    "train": {
+        "url": "https://huggingface.co/datasets/AI-Lab-Makerere/beans/resolve/27aa014ce09b193e1a6f58112d4a66e0eddb69c5/data/train-00000-of-00001.parquet",
+        "sha256": "7f905a7323966a58e89b8e839ed656bb869fc82d16a3fadc7dce40972a5f8b19"
+    },
+    "validation": {
+        "url": "https://huggingface.co/datasets/AI-Lab-Makerere/beans/resolve/27aa014ce09b193e1a6f58112d4a66e0eddb69c5/data/validation-00000-of-00001.parquet",
+        "sha256": "33f774593d8b31585457b70c224744e9409ffdee4e91a11822b1ebfe8242928f"
+    },
+    "test": {
+        "url": "https://huggingface.co/datasets/AI-Lab-Makerere/beans/resolve/27aa014ce09b193e1a6f58112d4a66e0eddb69c5/data/test-00000-of-00001.parquet",
+        "sha256": "534a6b0648f585d69b7ec0ad7a7540720d60c8db8106dc6d0508296316f6cb27"
+    }
+}

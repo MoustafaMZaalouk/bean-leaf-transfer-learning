@@ -1,0 +1,193 @@
+{
+    "smoke": false,
+    "dataset": "AI-Lab-Makerere/beans",
+    "dataset_revision": "27aa014ce09b193e1a6f58112d4a66e0eddb69c5",
+    "model": "microsoft/resnet-18",
+    "model_revision": "65a5785d9156231087c481e0c7dd33a5ff6f7e3e",
+    "seed": 42,
+    "C_grid": [
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0
+    ],
+    "classes": [
+        "angular_leaf_spot",
+        "bean_rust",
+        "healthy"
+    ],
+    "train_counts": [
+        345,
+        348,
+        341
+    ],
+    "validation_counts": [
+        44,
+        45,
+        44
+    ],
+    "test_counts": [
+        43,
+        43,
+        42
+    ],
+    "models": {
+        "color": {
+            "feature_count": 30,
+            "selected_C": 1.0,
+            "candidates": [
+                {
+                    "C": 0.001,
+                    "validation_macro_f1": 0.6539425803368002
+                },
+                {
+                    "C": 0.01,
+                    "validation_macro_f1": 0.6914534185651742
+                },
+                {
+                    "C": 0.1,
+                    "validation_macro_f1": 0.683701480580678
+                },
+                {
+                    "C": 1.0,
+                    "validation_macro_f1": 0.6978400841540666
+                },
+                {
+                    "C": 10.0,
+                    "validation_macro_f1": 0.6978400841540666
+                }
+            ],
+            "test": {
+                "accuracy": 0.734375,
+                "macro_f1": 0.732999377187896,
+                "correct": 94,
+                "n": 128,
+                "confusion_matrix": [
+                    [
+                        35,
+                        4,
+                        4
+                    ],
+                    [
+                        9,
+                        27,
+                        7
+                    ],
+                    [
+                        1,
+                        9,
+                        32
+                    ]
+                ]
+            }
+        },
+        "resnet18_frozen": {
+            "feature_count": 512,
+            "selected_C": 0.01,
+            "candidates": [
+                {
+                    "C": 0.001,
+                    "validation_macro_f1": 0.9029956027409741
+                },
+                {
+                    "C": 0.01,
+                    "validation_macro_f1": 0.9324974921891392
+                },
+                {
+                    "C": 0.1,
+                    "validation_macro_f1": 0.9024249660734922
+                },
+                {
+                    "C": 1.0,
+                    "validation_macro_f1": 0.9024249660734922
+                },
+                {
+                    "C": 10.0,
+                    "validation_macro_f1": 0.9024249660734922
+                }
+            ],
+            "test": {
+                "accuracy": 0.8984375,
+                "macro_f1": 0.8995489981315637,
+                "correct": 115,
+                "n": 128,
+                "confusion_matrix": [
+                    [
+                        38,
+                        5,
+                        0
+                    ],
+                    [
+                        7,
+                        36,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        41
+                    ]
+                ]
+            }
+        },
+        "resnet18_partial_finetune": {
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.45907774021589187,
+                    "validation_macro_f1": 0.864829287383039
+                }
+            ],
+            "selected_epoch": 1,
+            "test": {
+                "accuracy": 0.8203125,
+                "macro_f1": 0.8206787546224502,
+                "correct": 105,
+                "n": 128,
+                "confusion_matrix": [
+                    [
+                        27,
+                        16,
+                        0
+                    ],
+                    [
+                        2,
+                        39,
+                        2
+                    ],
+                    [
+                        0,
+                        3,
+                        39
+                    ]
+                ]
+            },
+            "trainable_parameters": 8395267
+        }
+    },
+    "majority_baseline": {
+        "accuracy": 0.3359375,
+        "macro_f1": 0.16764132553606237,
+        "correct": 43,
+        "n": 128,
+        "confusion_matrix": [
+            [
+                0,
+                43,
+                0
+            ],
+            [
+                0,
+                43,
+                0
+            ],
+            [
+                0,
+                42,
+                0
+            ]
+        ]
+    },
+    "elapsed_seconds": 66.98
+}
