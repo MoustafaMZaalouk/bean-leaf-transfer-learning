@@ -37,7 +37,7 @@ The final two training/evaluation steps are one command: `make train && make eva
 - `make train`: extract features, fit the training-only classifiers, audit splits, run partial fine-tuning and save predictions. Seed 42; deterministic PyTorch operations; four CPU threads.
 - `make eval`: verify saved predictions against recorded metrics, compute confidence intervals and regenerate all plots. This works offline from the included reports.
 - `make smoke`: actual training on six images per class per official split, writing only `.smoke-reports/`. It still downloads the pinned full parquet files, but only extracts features and trains on the subsample. Smoke metrics are not headline results.
-- `make lint test`: four-space formatter check, lint and correctness tests. CI runs these and `make smoke`. The workflow has been supplied, not run on GitHub.
+- `make lint test`: four-space formatter check, lint and correctness tests. CI runs these and `make smoke`. The published source passed hosted lint, tests and smoke training in [GitHub Actions](https://github.com/MoustafaMZaalouk/bean-leaf-transfer-learning/actions/runs/45293237274). Later run status is visible in the Actions tab.
 - `make clean-cache`: discard local feature arrays after changing extraction code or dependencies. Data and pretrained model downloads remain cached.
 
 ## How it works, in plain language
