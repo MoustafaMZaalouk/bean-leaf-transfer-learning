@@ -1,5 +1,9 @@
 # Bean Leaf Transfer Learning
 
+[![CI](https://github.com/MoustafaMZaalouk/bean-leaf-transfer-learning/workflows/correctness-and-smoke/badge.svg)](https://github.com/MoustafaMZaalouk/bean-leaf-transfer-learning/blob/main/.github/workflows/ci.yml)
+
+*Live workflow status, not a production-readiness or model-quality rating.*
+
 A small, AI-assisted portfolio project prepared for Moustafa Zaalouk. It compares simple color statistics with pretrained image features on real public bean-leaf photographs. It includes a deliberately limited fine-tuning experiment, including its worse result, rather than assuming a more complex model wins.
 
 **Status:** local research demo, not a plant-disease diagnostic tool. No cloud account, paid API or GitHub publishing is needed. Moustafa should review, run and explain the code before presenting it as his work.
